@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import faceio from '@faceio/fiojs';
+
 const App = () => {
   useEffect(() => {
     const initFaceIO = async () => {
       try {
-        const faceIO = new faceio('fioa9b63');
+        const faceIO = new faceIO('fioa9b63');
         await faceIO.init();
         console.log('FaceIO initialized successfully');
       } catch (error) {
@@ -15,7 +15,7 @@ const App = () => {
   }, []);
   const handleRegister = async () => {
     try {
-      const faceIO = new faceio('fioa9b63');
+      const faceIO = new faceIO('fioa9b63');
       const enrollOptions = {
         locale: 'auto',
         payload: { email: 'user@example.com' }
@@ -28,7 +28,7 @@ const App = () => {
   };
   const handleLogin = async () => {
     try {
-      const faceIO = new faceio('fioa9b63');
+      const faceIO = new faceIO('fioa9b63');
       const userData = await faceIO.authenticate();
       console.log('User authenticated successfully:', userData);
     } catch (error) {
